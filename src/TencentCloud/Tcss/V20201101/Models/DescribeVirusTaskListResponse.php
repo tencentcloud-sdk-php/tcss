@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getList() 获取文件查杀列表
  * @method void setList(array $List) 设置文件查杀列表
- * @method integer getTotalCount() 获取总数量
- * @method void setTotalCount(integer $TotalCount) 设置总数量
+ * @method integer getTotalCount() 获取总数量(容器任务数量)
+ * @method void setTotalCount(integer $TotalCount) 设置总数量(容器任务数量)
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,7 +35,7 @@ class DescribeVirusTaskListResponse extends AbstractModel
     public $List;
 
     /**
-     * @var integer 总数量
+     * @var integer 总数量(容器任务数量)
      */
     public $TotalCount;
 
@@ -46,7 +46,7 @@ class DescribeVirusTaskListResponse extends AbstractModel
 
     /**
      * @param array $List 文件查杀列表
-     * @param integer $TotalCount 总数量
+     * @param integer $TotalCount 总数量(容器任务数量)
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
