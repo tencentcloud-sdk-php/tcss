@@ -18,26 +18,26 @@ namespace TencentCloud\Tcss\V20201101\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeSecLogDeliveryKafkaOptions返回参数结构体
+ * DescribeExportJobManageList返回参数结构体
  *
- * @method array getInstanceList() 获取实例列表
- * @method void setInstanceList(array $InstanceList) 设置实例列表
- * @method array getRegionList() 获取地域列表
- * @method void setRegionList(array $RegionList) 设置地域列表
+ * @method integer getTotalCount() 获取总数
+ * @method void setTotalCount(integer $TotalCount) 设置总数
+ * @method array getList() 获取任务列表
+ * @method void setList(array $List) 设置任务列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeSecLogDeliveryKafkaOptionsResponse extends AbstractModel
+class DescribeExportJobManageListResponse extends AbstractModel
 {
     /**
-     * @var array 实例列表
+     * @var integer 总数
      */
-    public $InstanceList;
+    public $TotalCount;
 
     /**
-     * @var array 地域列表
+     * @var array 任务列表
      */
-    public $RegionList;
+    public $List;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +45,8 @@ class DescribeSecLogDeliveryKafkaOptionsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $InstanceList 实例列表
-     * @param array $RegionList 地域列表
+     * @param integer $TotalCount 总数
+     * @param array $List 任务列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,21 +62,16 @@ class DescribeSecLogDeliveryKafkaOptionsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceList",$param) and $param["InstanceList"] !== null) {
-            $this->InstanceList = [];
-            foreach ($param["InstanceList"] as $key => $value){
-                $obj = new CKafkaInstanceInfo();
-                $obj->deserialize($value);
-                array_push($this->InstanceList, $obj);
-            }
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("RegionList",$param) and $param["RegionList"] !== null) {
-            $this->RegionList = [];
-            foreach ($param["RegionList"] as $key => $value){
-                $obj = new RegionInfo();
+        if (array_key_exists("List",$param) and $param["List"] !== null) {
+            $this->List = [];
+            foreach ($param["List"] as $key => $value){
+                $obj = new ExportJobInfo();
                 $obj->deserialize($value);
-                array_push($this->RegionList, $obj);
+                array_push($this->List, $obj);
             }
         }
 

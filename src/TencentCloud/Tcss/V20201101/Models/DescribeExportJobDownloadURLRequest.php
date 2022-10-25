@@ -18,20 +18,20 @@ namespace TencentCloud\Tcss\V20201101\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeSecLogDeliveryKafkaOptions请求参数结构体
+ * DescribeExportJobDownloadURL请求参数结构体
  *
- * @method string getRegionID() 获取地域，若为空则返回所有可选地域
- * @method void setRegionID(string $RegionID) 设置地域，若为空则返回所有可选地域
+ * @method string getJobID() 获取任务ID
+ * @method void setJobID(string $JobID) 设置任务ID
  */
-class DescribeSecLogDeliveryKafkaOptionsRequest extends AbstractModel
+class DescribeExportJobDownloadURLRequest extends AbstractModel
 {
     /**
-     * @var string 地域，若为空则返回所有可选地域
+     * @var string 任务ID
      */
-    public $RegionID;
+    public $JobID;
 
     /**
-     * @param string $RegionID 地域，若为空则返回所有可选地域
+     * @param string $JobID 任务ID
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeSecLogDeliveryKafkaOptionsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RegionID",$param) and $param["RegionID"] !== null) {
-            $this->RegionID = $param["RegionID"];
+        if (array_key_exists("JobID",$param) and $param["JobID"] !== null) {
+            $this->JobID = $param["JobID"];
         }
     }
 }
