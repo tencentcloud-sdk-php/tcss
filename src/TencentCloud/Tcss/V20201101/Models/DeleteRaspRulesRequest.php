@@ -18,28 +18,20 @@ namespace TencentCloud\Tcss\V20201101\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 表示K8S资产专属的详情。
+ * DeleteRaspRules请求参数结构体
  *
- * @method string getClusterName() 获取K8S集群的名称。
- * @method void setClusterName(string $ClusterName) 设置K8S集群的名称。
- * @method string getClusterVersion() 获取K8S集群的版本。
- * @method void setClusterVersion(string $ClusterVersion) 设置K8S集群的版本。
+ * @method array getIDs() 获取待删除的规则ID数组 (最大100条)
+ * @method void setIDs(array $IDs) 设置待删除的规则ID数组 (最大100条)
  */
-class ComplianceK8SDetailInfo extends AbstractModel
+class DeleteRaspRulesRequest extends AbstractModel
 {
     /**
-     * @var string K8S集群的名称。
+     * @var array 待删除的规则ID数组 (最大100条)
      */
-    public $ClusterName;
+    public $IDs;
 
     /**
-     * @var string K8S集群的版本。
-     */
-    public $ClusterVersion;
-
-    /**
-     * @param string $ClusterName K8S集群的名称。
-     * @param string $ClusterVersion K8S集群的版本。
+     * @param array $IDs 待删除的规则ID数组 (最大100条)
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class ComplianceK8SDetailInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
-            $this->ClusterName = $param["ClusterName"];
-        }
-
-        if (array_key_exists("ClusterVersion",$param) and $param["ClusterVersion"] !== null) {
-            $this->ClusterVersion = $param["ClusterVersion"];
+        if (array_key_exists("IDs",$param) and $param["IDs"] !== null) {
+            $this->IDs = $param["IDs"];
         }
     }
 }
