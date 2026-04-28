@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAssetImageDetail请求参数结构体
  *
- * @method string getImageID() 获取镜像id
- * @method void setImageID(string $ImageID) 设置镜像id
+ * @method string getImageID() 获取<p>镜像id</p>
+ * @method void setImageID(string $ImageID) 设置<p>镜像id</p>
  */
 class DescribeAssetImageDetailRequest extends AbstractModel
 {
     /**
-     * @var string 镜像id
+     * @var string <p>镜像id</p>
      */
     public $ImageID;
 
     /**
-     * @param string $ImageID 镜像id
+     * @param string $ImageID <p>镜像id</p>
      */
     function __construct()
     {
